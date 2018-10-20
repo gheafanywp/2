@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Add Dokter</title>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ -->		<object th:include="fragments/fragment :: css" th:remove="tag"></object>
+		<object th:include="fragments/fragment :: js" th:remove="tag"></object>
+		
+	</head>
+	<body>
+		<nav th:replace="fragments/fragment :: navbar"></nav>
+		
+		<h3>Form Dokter</h3>
+		
+		<form th:action="@{/dokter/tambah}" th:object="${dokter}" method="POST">
+			NIK: <br>
+			<input th:field="*{nik}" type="text" />
+			<br>
+			Nama Dokter: <br>
+			<input th:field="*{nama_dokter}" type="text"/> 	
+			<br>
+			Jenis Kelamin: <br>
+			<input th:field="jenis_kelamin" type="number"/> 	
+			<br>
+			Tanggal Lahir: <br>
+			<input th:field="*{tanggal_lahir}" type="date"/>
+			<br>
+			Alamat: <br>
+			<input th:field="*{alamat_dokter}" type="text"/> 	
+			<br>
+			<br>
+			No HP: <br>
+			<input th:field="*{no_hp" type="text"/> 	
+			<br>
+			<br>
+			Spesialisasi: <br>
+			<input th:field="*{spesialisasi}" type="text"/> 	
+			<br>
+			<br>
+			status: <br>
+			<input th:field="*{status}" type="number"/> 	
+			<br>
+			<button type="submit" name="DokterSubmit">Submit</button>
+		</form>
+		
+	</body>
+</html>

@@ -7,7 +7,7 @@ import com.apap.uts02.model.DokterModel;
 
 public interface DokterService {
 	DokterModel getDokterDetailByNik(String nik);
-	void deleteDokter(DokterModel dokter);
+	void addDokter(DokterModel dokter);
 
 
 }

@@ -16,11 +16,6 @@ public class DokterServiceImpl implements DokterService {
 	@Autowired
 	private DokterDB dokterDB;
 
-//	@Override
-//	public void addJabatan(JabatanModel jabatan) {
-//		// TODO Auto-generated method stub
-//		jabatanDB.save(jabatan);
-//	}
 
 	
 	@Override
@@ -29,8 +24,9 @@ public class DokterServiceImpl implements DokterService {
 	}
 
 	@Override
-	public void deleteDokter( DokterModel dokter) {
-		dokterDB.deleteById(dokter.getId());
+	public void addDokter(DokterModel dokter) {
+		// TODO Auto-generated method stub
+		dokterDB.save(dokter);
 	}
 
 	
