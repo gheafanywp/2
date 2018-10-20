@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+ <head>
+ 	<nav th:replace="fragments/fragment :: navbar"></nav>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <meta charset="UTF-8">
+    <title>Lihat Dokter</title>	
+ </head>
+ 
+ <body>
+  <h2 th:text="'Lihat Data Dokter  -  '+${dokter.nik}"></h2>
+  
+  <table style="width:100%">
+      <tr>
+          <td>NIK</td>
+          <td th:text="${dokter.nik}"></td>
+      </tr>
+      <tr>
+          <td>Nama Dokter</td>
+          <td th:text="${dokter.nama_dokter}"></td>
+      </tr>
+      <tr>
+          <td>Jenis Kelamin</td>
+          <td th:text="${dokter.jenis_kelamin}"></td>
+      </tr>
+      <tr>
+          <td>Tanggal Lahir</td>
+          <td th:text="${dokter.tanggal_lahir}"></td>
+      </tr>
+      <tr>
+          <td>Alamat</td>
+          <td th:text="${dokter.alamat}"></td>
+      </tr>
+      <tr>
+          <td>No HP</td>
+          <td th:text="${dokter.no_hp}"></td>
+      </tr>
+      <tr>
+          <td>Spesialisasi</td>
+          <td th:text="${dokter.spesialisasi}"></td>
+      </tr>
+      <tr>
+          <td>Status</td>
+          <td th:text="${dokter.status}"></td>
+      </tr>
+  </table>
+
+  
+ </body>
+</html>
